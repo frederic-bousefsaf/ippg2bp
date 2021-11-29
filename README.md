@@ -29,21 +29,23 @@ Different packages must be installed to properly run the codes :
 
 
 ## Usage
+BP4D+ is available here: [BP4D+](http://www.cs.binghamton.edu/~lijun/Research/3DFE/3DFE_Analysis.html). 
+We carried out a manual selection of proper iPPG and BP signals. The Selected samples are detailed in the file `DB_details.xlsx`.
+
 **Training**
 
-<!---
-`train and predict/train.py` includes all the procedures. The input, `data.mat`, corresponds to a collection of continuous wavelet representation (size: 256×256) of iPPG and ground truth BP signals (not supplied here). `train and predict/signal_to_cwt.py` is the MATLAB procedure dedicated to the conversion of a raw PPG signal (5 successive PPG waves) to its wavelet representation.
---->
+`train.py` includes all the training procedure. The input, `data.mat`, corresponds to a collection of continuous wavelet representation (size: 256×256) of iPPG and ground truth BP signals (not supplied here). `signal_to_cwt.py` is the MATLAB procedure dedicated to the conversion of a raw iPPG signal to its wavelet representation. Note that the mean pressure must be added to the CWT of BP signals using the following MATLAB command:
+`CWT.cfs = CWT.cfs + (CWT.meanSIG + 1i*CWT.meanSIG);`
+
 
 
 **Prediction**
 
 <!---
 Trained architectures (U-Net supported by a ResNeXt101 backbone) [are freely available.](https://zenodo.org/record/5482374)
+--->
 
-The dataset employed to train the networks has not been publicly released yet but excerpts [are available.](https://zenodo.org/record/5477689)
-
-`train and predict/predict.py` will output a `.mat` file that can be analyzed with the `results analysis/main.py` MATLAB code.
+`predict.py` will output a `.mat` file that can be analyzed with MATLAB.
 
 ![Alt text](illustrations/pred.png?raw=true "Results computed from sample data")
---->
+
