@@ -30,7 +30,7 @@ Different packages must be installed to properly run the codes :
 
 ## Usage
 BP4D+ is available [here](http://www.cs.binghamton.edu/~lijun/Research/3DFE/3DFE_Analysis.html). 
-We carried out a manual selection of proper iPPG and BP signals. The selected samples are detailed in the file `DB_details.xlsx`.
+We carried out a manual selection of proper iPPG and BP signals. The selected samples are detailed in the file `BP4D_selected_participants.txt`.
 
 **Training**
 
