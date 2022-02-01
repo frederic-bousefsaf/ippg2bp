@@ -10,10 +10,11 @@ Frédéric Bousefsaf et al., **iPPG 2 BP: reconstructing blood pressure waves fr
 You can also visit my [website](https://sites.google.com/view/frederic-bousefsaf) for additional information.
 
 ## Scientific description
-Please refer to the original publication to get all the details. We propose converting imaging photoplethysmographic (iPPG) to blood pressure (BP) signals using their continuous wavelet transforms (CWT). The real and imaginary parts of the CWT are passed to a deep pre-trained (ResNeXt101) U-shaped architecture.
+Please refer to the original publication to get all the details. 
+<!---We propose converting imaging photoplethysmographic (iPPG) to blood pressure (BP) signals using their continuous wavelet transforms (CWT). The real and imaginary parts of the CWT are passed to a deep pre-trained (ResNeXt101) U-shaped architecture.--->
 
 
-![Alt text](illustrations/overview2.png?raw=true "Overview")
+<!---![Alt text](illustrations/overview2.png?raw=true "Overview")--->
 
 
 ## Requirements
@@ -34,9 +35,11 @@ We carried out a manual selection of proper iPPG and BP signals. The selected sa
 
 **Training**
 
-`train.py` includes all the training procedure. The input, `data.mat`, corresponds to a collection of continuous wavelet representation (size: 256×256) of iPPG and ground truth BP signals (not supplied here). `signal_to_cwt.py` is the MATLAB procedure dedicated to the conversion of a raw iPPG signal to its wavelet representation. Note that the mean pressure must be added to the CWT of BP signals using the following MATLAB command:
+`train.py` includes all the training procedure. 
 
-`CWT.cfs = CWT.cfs + (CWT.meanSIG + 1i*CWT.meanSIG);`
+<!---The input, `data.mat`, corresponds to a collection of continuous wavelet representation (size: 256×256) of iPPG and ground truth BP signals (not supplied here). `signal_to_cwt.py` is the MATLAB procedure dedicated to the conversion of a raw iPPG signal to its wavelet representation. Note that the mean pressure must be added to the CWT of BP signals using the following MATLAB command:
+
+`CWT.cfs = CWT.cfs + (CWT.meanSIG + 1i*CWT.meanSIG);`--->
 
 
 
