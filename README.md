@@ -13,7 +13,7 @@ You can also visit my [website](https://sites.google.com/view/frederic-bousefsaf
 Please refer to the original publication to get all the details. We propose to convert imaging photoplethysmographic (iPPG) to blood pressure (BP) signals using their continuous wavelet transforms (CWT). The real and imaginary parts of the CWT are passed to a deep pre-trained (ResNeXt101) U-shaped architecture.
 
 
-[Alt text](illustrations/overview2.png?raw=true "Overview")
+![Alt text](illustrations/overview2.png?raw=true "Overview")
 
 
 ## Requirements
