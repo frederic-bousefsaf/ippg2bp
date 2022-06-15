@@ -44,7 +44,7 @@ The input, `data_training.mat` (and `data_validation.mat`), corresponds to a col
 
 **Prediction**
 
-The trained architecture (U-Net supported by a ResNeXt101 backbone) [is freely available](https://zenodo.org/record/6647144). You can test this model on some [freely available excerpts](https://zenodo.org/record/6647204).
+The trained architecture (U-Net supported by a ResNeXt101 backbone) [is available on Zenodo](https://zenodo.org/record/6647144). You can test this model on some [freely available excerpts](https://zenodo.org/record/6647204).
 
 `predict.py` will output a `.mat` file that can be analyzed with MATLAB.
 
