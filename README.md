@@ -36,7 +36,7 @@ We carried out a manual selection of proper iPPG and BP signals. The selected sa
 
 `train.py` includes all the training procedure. 
 
-The input, `data_training.mat`, corresponds to a collection of continuous wavelet representation (size: 256×256) of iPPG and ground truth BP signals (not supplied here). `signal_to_cwt.py` is the MATLAB procedure dedicated to the conversion of a raw iPPG signal to its wavelet representation. Note that the mean pressure must be added to the CWT of BP signals before computing the inverse transform. You can use this following MATLAB command:
+The input, `data_training.mat` (and `data_validation.mat`), corresponds to a collection of continuous wavelet representation (size: 256×256) of iPPG and ground truth BP signals (not supplied here). `signal_to_cwt.py` is the MATLAB procedure dedicated to the conversion of a raw iPPG signal to its wavelet representation. Note that the mean pressure must be added to the CWT of BP signals before computing the inverse transform. You can use this following MATLAB command:
 
 `CWT.cfs = CWT.cfs + (CWT.meanSIG + 1i*CWT.meanSIG);`
 
