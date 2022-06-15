@@ -13,11 +13,11 @@ You can also visit my [website](https://sites.google.com/view/frederic-bousefsaf
 Please refer to the original publication to get all the details. We propose to convert imaging photoplethysmographic (iPPG) to blood pressure (BP) signals using their continuous wavelet transforms (CWT). The real and imaginary parts of the CWT are passed to a deep pre-trained (ResNeXt101) U-shaped architecture.
 
 
-<!---![Alt text](illustrations/overview2.png?raw=true "Overview")--->
+[Alt text](illustrations/overview2.png?raw=true "Overview")
 
 
 ## Requirements
-Deep learning models have been developed and learned through Tensorflow+Keras frameworks (2.4.0) over Python 3.5/3.6 . Results were analyzed with MATLAB R2020b.
+Deep learning models have been developed and learned through Tensorflow+Keras frameworks (2.3.4) over Python 3.8 . Results were analyzed with MATLAB R2020b.
 
 Different packages must be installed to properly run the codes : 
 - `pip install tensorflow` (or `tensorflow-gpu`)
@@ -36,17 +36,15 @@ We carried out a manual selection of proper iPPG and BP signals. The selected sa
 
 `train.py` includes all the training procedure. 
 
-<!---The input, `data.mat`, corresponds to a collection of continuous wavelet representation (size: 256×256) of iPPG and ground truth BP signals (not supplied here). `signal_to_cwt.py` is the MATLAB procedure dedicated to the conversion of a raw iPPG signal to its wavelet representation. Note that the mean pressure must be added to the CWT of BP signals using the following MATLAB command:
+The input, `data.mat`, corresponds to a collection of continuous wavelet representation (size: 256×256) of iPPG and ground truth BP signals (not supplied here). `signal_to_cwt.py` is the MATLAB procedure dedicated to the conversion of a raw iPPG signal to its wavelet representation. Note that the mean pressure must be added to the CWT of BP signals before computing the inverse transform. You can use this following MATLAB command:
 
-`CWT.cfs = CWT.cfs + (CWT.meanSIG + 1i*CWT.meanSIG);`--->
+`CWT.cfs = CWT.cfs + (CWT.meanSIG + 1i*CWT.meanSIG);`
 
 
 
 **Prediction**
 
-<!---
-Trained architectures (U-Net supported by a ResNeXt101 backbone) [are freely available.](https://zenodo.org/record/5482374)
---->
+The trained architecture (U-Net supported by a ResNeXt101 backbone) [is freely available](https://zenodo.org/record/6647144). You can test this model on some [freely available excerpts](https://zenodo.org/record/5477689).
 
 `predict.py` will output a `.mat` file that can be analyzed with MATLAB.
 
