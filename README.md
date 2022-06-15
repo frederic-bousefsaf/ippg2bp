@@ -5,13 +5,12 @@ This repository contains the source codes related to a deep learning model dedic
 ## Reference
 If you find this code useful or use it in an academic or research project, please cite it as:
 
-Frédéric Bousefsaf et al., **iPPG 2 BP: reconstructing blood pressure waves from imaging photoplethysmographic signals using U-Net architectures**, *preprint*, 2021.
+Frédéric Bousefsaf et al., **Estimation of blood pressure waveform from facial video using a deep U-shaped network and the wavelet representation of imaging photoplethysmographic signals**, *Biomedical Signal Processing and Control*, 2022.
 
 You can also visit my [website](https://sites.google.com/view/frederic-bousefsaf) for additional information.
 
 ## Scientific description
-Please refer to the original publication to get all the details. 
-<!---We propose converting imaging photoplethysmographic (iPPG) to blood pressure (BP) signals using their continuous wavelet transforms (CWT). The real and imaginary parts of the CWT are passed to a deep pre-trained (ResNeXt101) U-shaped architecture.--->
+Please refer to the original publication to get all the details. We propose to convert imaging photoplethysmographic (iPPG) to blood pressure (BP) signals using their continuous wavelet transforms (CWT). The real and imaginary parts of the CWT are passed to a deep pre-trained (ResNeXt101) U-shaped architecture.
 
 
 <!---![Alt text](illustrations/overview2.png?raw=true "Overview")--->
